@@ -1,6 +1,6 @@
 {
-  "name": "sf-json-mapper",
-  "version": "1.1.1",
+  "name": "shopflo-json-mapper",
+  "version": "0.0.1",
   "description": "",
   "main": ".lib/index.js",
   "types": "lib/index.d.ts",
