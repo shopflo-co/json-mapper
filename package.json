@@ -1,0 +1,29 @@
+{
+  "name": "sf-json-mapper",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shopflo-co/json-mapper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shopflo-co/json-mapper/issues"
+  },
+  "homepage": "https://github.com/shopflo-co/json-mapper#readme",
+  "dependencies": {
+    "jsonpath": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/jsonpath": "^0.2.0"
+  }
+}
