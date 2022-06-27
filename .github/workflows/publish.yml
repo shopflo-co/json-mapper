@@ -17,9 +17,7 @@ jobs:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
       - run: npm install typescript
-      - run: yarn install
       - run: npx tsc
-      - run: npm adduser --registry=https://registry.npmjs.com
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
