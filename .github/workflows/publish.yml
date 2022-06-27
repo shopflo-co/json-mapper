@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: npm install typescript
       - run: yarn install
       - run: npx tsc
       - run: npm publish
