@@ -1,11 +1,9 @@
-import * as jp from 'jsonpath';
-
+var jsonpath = require("jsonpath")
 export interface IJsonMapper {
     path: string,
     transformer?: Function,
     defaultValue?: any
 }
-
 export class JsonMapper {
     map = (mapping: any, payload: object) => {
         let out = {};
@@ -24,11 +22,11 @@ export class JsonMapper {
     }
 
     private isAnIJsonMapper(obj: any): obj is IJsonMapper {
-        return obj.path && obj.transformer && obj.defaultValue;
+        return obj.path || obj.transformer || obj.defaultValue;
     }
 
     private iJsonMapperTypeFunc = (payload: object, mapping: any, key: string, out: any) => {
-        let jpOut = jp.apply(payload, mapping[key].path,
+        let jpOut = jsonpath.apply(payload, mapping[key].path,
             mapping[key].transformer ? mapping[key].transformer : (x) => { return x });
         if(jpOut[0]) {
             out[key] = jpOut[0].value;
